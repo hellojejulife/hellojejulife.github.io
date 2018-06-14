@@ -507,15 +507,11 @@
                 </tbody>
             </table>
         </div>
-        <!--
+        
         <div class="share">
-            <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#exampleModalCenter">2018 러시아 월드컵 일정 퍼가기</button>
+            <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#myModal" onclick="count();">2018 러시아 월드컵 일정 퍼가기</button>
             <button type="button" class="btn btn-warning">카카오톡 공유하기</button>
         </div>
-        -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Launch demo modal
-        </button>
       
       
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="backdrop">
@@ -540,7 +536,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script>
-        //$('#myModal').modal();
+        function count() {
+            console.log(1);
+        }
         </script>
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
         <script type="text/javascript">
