@@ -519,31 +519,11 @@
             <button type="button" class="btn btn-warning" id="kakao-link-btn" href="javascript:;" style="width:100%; height:60px;"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
         </div>
       
-      
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="backdrop">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">2018 러시아 월드컵 일정 퍼가기</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <textarea id="clipBoard" style="width: 100%; height: 40px;" readonly>아래에 "복사하기" 버튼을 클릭하세요.</textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary source_btn"><i class="far fa-clipboard"></i> 복사하기</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> 닫기</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script>
         var height = $(document).height()+100;
-        $('.source_btn').click(function(){
+        $('.url-share').click(function(){
         var html = $(this).parent().prev().html();
             html = '<iframe width="100%" height="'+height+'px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen></iframe>';
             $('#clipBoard').css('display', 'block').val(html).select();
@@ -559,7 +539,7 @@
             }
 
             if(succeed){
-                alert('소스코드가 복사 되었습니다\n본인의 블로그 또는 사이트에 붙여넣으세요.');
+                alert('소스코드가 복사 되었습니다\n본인의 블로그 또는 사이트에 붙여넣기 하세요.');
             }
             return false;
 
