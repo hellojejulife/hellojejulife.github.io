@@ -56,6 +56,13 @@
     .mt-10 {
         margin: 10px auto;
     }
+    .tvSection {
+        display:block;
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        background: #fff;
+    }
     </style>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
@@ -121,12 +128,27 @@
             <blockquote class="blockquote">
                 <p class="mb-0 mt-10">조별 리그 - A조</p>
             </blockquote>
+            <div class="tvSection" style="display:none;">
+                <iframe src="http://play.afreecatv.com/afworldcup02/204538665/embed" width="100%" height="480" frameborder="0" allowfullscreen></iframe>
+                <div class="google_ad">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- github_hellojejulife -->
+                    <ins class="adsbygoogle"
+                            style="display:block"
+                            data-ad-client="ca-pub-9875837474705509"
+                            data-ad-slot="8637183940"
+                            data-ad-format="auto"></ins>
+                    <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
             <table class="table table-bordered">  
                 <tbody>
                     <tr>
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 15일(금)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ru.png" /><br />러시아<br />vs<br /><img src="flags.32/sa.png" /><br />사우디아라비아</td>
-                        <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/12#?chid=12" target="_blank">KBS 2TV</a><br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
+                        <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/12#?chid=12" target="_blank">KBS 2TV</a><br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a><br /><a href="javascript:;" onclick="watchTv();">여기서 바로보기</a></td>
                     </tr>
                     <tr>
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 15일(금)<br />21:00</th>
@@ -547,6 +569,9 @@
         });
         function count() {
             console.log(1);
+        }
+        function watchTv() {
+            $(".tvSection").css("display", "block");
         }
         </script>
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
