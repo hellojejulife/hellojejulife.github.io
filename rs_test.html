@@ -518,17 +518,19 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">2018 러시아 월드컵 일정 퍼가기</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
-                    ...
+                        <textarea id="clipBoard" style="display:none">
+                            
+                        </textarea>
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary source_btn">소스 복사하기</button>
                     </div>
                 </div>
             </div>
@@ -536,6 +538,27 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script>
+        $('.source_btn').click(function(){
+        var html = $(this).parent().prev().html();
+            html = '<iframe width="100%" height="10100px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen=""></iframe>';
+            $('#clipBoard').css('display', 'block').val(html).select();
+            
+            // copy the selection
+            var succeed;
+            try {
+                succeed = document.execCommand("copy");
+                $('#ClipBoard').css('display', 'none');
+
+            } catch(e) {
+                succeed = false;
+            }
+
+            if(succeed){
+                alert('복사 되었습니다');
+            }
+            return false;
+
+        });
         function count() {
             console.log(1);
         }
