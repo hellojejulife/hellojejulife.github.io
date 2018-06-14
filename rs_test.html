@@ -538,7 +538,7 @@
         <script>
         $('.source_btn').click(function(){
         var html = $(this).parent().prev().html();
-            html = '<iframe width="100%" height="10100px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen=""></iframe>';
+            //html = '<iframe width="100%" height="10100px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen=""></iframe>';
             $('#clipBoard').css('display', 'block').val(html).select();
             
             // copy the selection
@@ -561,8 +561,12 @@
             console.log(1);
         }
 
-        var hei = $(document).height();
-        console.log(hei);
+        var height = $(document).height();
+        $(document).ready(function() {
+            var i_source = '<iframe width="100%" height="'+height+'" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen=""></iframe>';
+            $("#clipBoard").val(i_source);
+        });
+        //console.log(hei);
         </script>
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
         <script type="text/javascript">
