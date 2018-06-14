@@ -9,6 +9,7 @@
     <meta property="og:description" content="2018 러시아 월드컵 일정 보기"/>
     <title>2018 러시아 월드컵</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <style>
     #russia_2018_container {
         width: 100%;
@@ -56,6 +57,7 @@
         margin: 10px auto;
     }
     </style>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
     <div id="russia_2018_container">
@@ -511,32 +513,28 @@
                 </tbody>
             </table>
         </div>
-        <!--
-        <div class="share">
-            <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#exampleModalCenter">2018 러시아 월드컵 일정 퍼가기</button>
-            <button type="button" class="btn btn-warning">카카오톡 공유하기</button>
-        </div>
         
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-        Launch demo modal
-        </button>
+        <div class="share">
+            <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#myModal" onclick="count();" style="width:80%; height:60px; margin-bottom: 10px;"><i class="fas fa-share"></i> 2018 러시아 월드컵 일정 퍼가기</button>
+            <button type="button" class="btn btn-warning" id="kakao-link-btn" href="javascript:;" style="width:80%; height:60px;"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
+        </div>
       
       
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="backdrop">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">2018 러시아 월드컵 일정 퍼가기</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
-                    ...
+                        <textarea id="clipBoard" style="width: 100%; height: 40px;" readonly>아래에 "복사하기" 버튼을 클릭하세요.</textarea>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-primary source_btn"><i class="far fa-clipboard"></i> 복사하기</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> 닫기</button>
                     </div>
                 </div>
             </div>
@@ -544,14 +542,71 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script>
-        //$('#myModal').modal();
+        var height = $(document).height()+100;
+        $('.source_btn').click(function(){
+        var html = $(this).parent().prev().html();
+            html = '<iframe width="100%" height="'+height+'px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen></iframe>';
+            $('#clipBoard').css('display', 'block').val(html).select();
+            
+            // copy the selection
+            var succeed;
+            try {
+                succeed = document.execCommand("copy");
+                $('#ClipBoard').css('display', 'none');
+
+            } catch(e) {
+                succeed = false;
+            }
+
+            if(succeed){
+                alert('소스코드가 복사 되었습니다\n본인의 블로그 또는 사이트에 붙여넣으세요.');
+            }
+            return false;
+
+        });
+        function count() {
+            console.log(1);
+        }
         </script>
-        -->
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
         <script type="text/javascript">
         if(!wcs_add) var wcs_add = {};
         wcs_add["wa"] = "922131be4ed6f8";
         wcs_do();
+        </script>
+        <script type='text/javascript'>
+            //<![CDATA[
+            // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+            Kakao.init('fbeb5326da01583270dd8ac3137d8f21');
+            // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+            Kakao.Link.createDefaultButton({
+            container: '#kakao-link-btn',
+            objectType: 'feed',
+            content: {
+                title: '2018 러시아 월드컵 일정',
+                description: '#월드컵 #러시아 월드컵 #국가대표 #2018',
+                imageUrl: 'http://img1.daumcdn.net/thumb/R1920x0/?fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F994180345B21FA24176BFB',
+                link: {
+                mobileWebUrl: 'https://hellojejulife.github.io/russia_worldcup.html',
+                webUrl: 'https://hellojejulife.github.io/russia_worldcup.html'
+                }
+            },
+            social: {
+                likeCount: 286,
+                commentCount: 45,
+                sharedCount: 845
+            },
+            buttons: [
+                {
+                title: '2018 러시아 월드컵 일정 보기',
+                link: {
+                    mobileWebUrl: 'https://hellojejulife.github.io/russia_worldcup.html',
+                    webUrl: 'https://hellojejulife.github.io/russia_worldcup.html'
+                    }
+                }
+            ]
+            });
+        //]]>
         </script>
 </body>
 </html>
