@@ -532,13 +532,14 @@
             var succeed;
             try {
                 succeed = document.execCommand("copy");
-                $('#ClipBoard').css('display', 'none');
+                //$('#ClipBoard').css('display', 'none');
 
             } catch(e) {
                 succeed = false;
             }
 
             if(succeed){
+                console.log(html);
                 alert('소스코드가 복사 되었습니다\n본인의 블로그 또는 사이트에 붙여넣기 하세요.');
             }
             return false;
