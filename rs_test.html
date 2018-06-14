@@ -536,10 +536,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script>
-        var height = $(document).height();
+        var height = $(document).height()+100;
         $('.source_btn').click(function(){
         var html = $(this).parent().prev().html();
-            html = '<iframe width="100%" height="'+height+100+'px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen=""></iframe>';
+            html = '<iframe width="100%" height="'+height+'px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen></iframe>';
             $('#clipBoard').css('display', 'block').val(html).select();
             
             // copy the selection
