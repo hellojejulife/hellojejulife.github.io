@@ -513,7 +513,7 @@
                 </tbody>
             </table>
         </div>
-        
+        <textarea id="clipBoard" style="width: 100%; height: 40px; display: none;" readonly>아래에 "복사하기" 버튼을 클릭하세요.</textarea>
         <div class="share">
             <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#myModal" onclick="count();" style="width:100%; height:60px; margin-bottom: 10px;"><i class="fas fa-share"></i> 2018 러시아 월드컵 일정 퍼가기</button>
             <button type="button" class="btn btn-warning" id="kakao-link-btn" href="javascript:;" style="width:100%; height:60px;"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
@@ -526,13 +526,13 @@
         $('.url-share').click(function(){
         var html = $(this).parent().prev().html();
             html = '<iframe width="100%" height="'+height+'px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen></iframe>';
-            $('.url-share').val(html).select();
+            $('#clipBoard').css('display', 'block').val(html).select();
             
             // copy the selection
             var succeed;
             try {
                 succeed = document.execCommand("copy");
-                //$('#ClipBoard').css('display', 'none');
+                $('#clipBoard').css('display', 'none');
 
             } catch(e) {
                 succeed = false;
