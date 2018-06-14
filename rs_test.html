@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta property="og:title" content="2018 러시아 월드컵 일정"/>
+    <meta property="og:url" content="https://hellojejulife.github.io/russia_worldcup.html"/>
+    <meta property="og:image" content="http://img1.daumcdn.net/thumb/R1920x0/?fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F994180345B21FA24176BFB"/>
+    <meta property="og:description" content="2018 러시아 월드컵 일정 보기"/>
     <title>2018 러시아 월드컵</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -53,6 +57,7 @@
         margin: 10px auto;
     }
     </style>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
     <div id="russia_2018_container">
@@ -511,7 +516,7 @@
         
         <div class="share">
             <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#myModal" onclick="count();"><i class="fas fa-share"></i> 2018 러시아 월드컵 일정 퍼가기</button>
-            <button type="button" class="btn btn-warning"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
+            <button type="button" class="btn btn-warning" id="kakao-link-btn" href="javascript:;"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
         </div>
       
       
@@ -568,6 +573,40 @@
         if(!wcs_add) var wcs_add = {};
         wcs_add["wa"] = "922131be4ed6f8";
         wcs_do();
+        </script>
+        <script type='text/javascript'>
+            //<![CDATA[
+            // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+            Kakao.init('fbeb5326da01583270dd8ac3137d8f21');
+            // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+            Kakao.Link.createDefaultButton({
+            container: '#kakao-link-btn',
+            objectType: 'feed',
+            content: {
+                title: '2018 러시아 월드컵 일정',
+                description: '#월드컵 #러시아 월드컵 #국가대표 #2018',
+                imageUrl: 'http://img1.daumcdn.net/thumb/R1920x0/?fname=http%3A%2F%2Fcfile28.uf.tistory.com%2Fimage%2F994180345B21FA24176BFB',
+                link: {
+                mobileWebUrl: 'https://hellojejulife.github.io/russia_worldcup.html',
+                webUrl: 'https://hellojejulife.github.io/russia_worldcup.html'
+                }
+            },
+            social: {
+                likeCount: 286,
+                commentCount: 45,
+                sharedCount: 845
+            },
+            buttons: [
+                {
+                title: '2018 러시아 월드컵 일정 보기',
+                link: {
+                    mobileWebUrl: 'https://hellojejulife.github.io/russia_worldcup.html',
+                    webUrl: 'https://hellojejulife.github.io/russia_worldcup.html'
+                    }
+                }
+            ]
+            });
+        //]]>
         </script>
 </body>
 </html>
