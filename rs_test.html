@@ -56,6 +56,13 @@
     .mt-10 {
         margin: 10px auto;
     }
+    .tvSection {
+        width: 100%;
+        min-width: 320px;
+        height: 650px;
+        margin: 0 auto;
+        background: #fff;
+    }
     </style>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
@@ -124,8 +131,8 @@
             <table class="table table-bordered">  
                 <tbody>
                     <tr>
-                        <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 15일(금)<br />00:00</th>
-                        <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ru.png" /><br />러시아<br />vs<br /><img src="flags.32/sa.png" /><br />사우디아라비아</td>
+                        <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 15일(금)<br />00:00<br /><span class="badge badge-dark">경기 종료</span></th>
+                        <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ru.png" /><span class="score_1 badge badge-pill badge-danger">5</span><br />러시아<br />vs<br /><img src="flags.32/sa.png" /><span class="score_2 badge badge-pill badge-danger">0</span><br />사우디아라비아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/12#?chid=12" target="_blank">KBS 2TV</a><br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
                     <tr>
@@ -513,37 +520,17 @@
                 </tbody>
             </table>
         </div>
-        
+        <textarea id="clipBoard" style="width: 100%; height: 40px; display: none;" readonly>아래에 "복사하기" 버튼을 클릭하세요.</textarea>
         <div class="share">
-            <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#myModal" onclick="count();" style="width:80%; height:60px; margin-bottom: 10px;"><i class="fas fa-share"></i> 2018 러시아 월드컵 일정 퍼가기</button>
-            <button type="button" class="btn btn-warning" id="kakao-link-btn" href="javascript:;" style="width:80%; height:60px;"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
+            <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#myModal" onclick="count();" style="width:100%; height:60px; margin-bottom: 10px;"><i class="fas fa-share"></i> 2018 러시아 월드컵 일정 퍼가기</button>
+            <button type="button" class="btn btn-warning" id="kakao-link-btn" href="javascript:;" style="width:100%; height:60px;"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
         </div>
       
-      
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="backdrop">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">2018 러시아 월드컵 일정 퍼가기</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <textarea id="clipBoard" style="width: 100%; height: 40px;" readonly>아래에 "복사하기" 버튼을 클릭하세요.</textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary source_btn"><i class="far fa-clipboard"></i> 복사하기</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="far fa-window-close"></i> 닫기</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
         <script>
         var height = $(document).height()+100;
-        $('.source_btn').click(function(){
+        $('.url-share').click(function(){
         var html = $(this).parent().prev().html();
             html = '<iframe width="100%" height="'+height+'px" src="https://hellojejulife.github.io/russia_worldcup.html" frameborder="0" allowfullscreen></iframe>';
             $('#clipBoard').css('display', 'block').val(html).select();
@@ -552,14 +539,15 @@
             var succeed;
             try {
                 succeed = document.execCommand("copy");
-                $('#ClipBoard').css('display', 'none');
+                $('#clipBoard').css('display', 'none');
 
             } catch(e) {
                 succeed = false;
             }
 
             if(succeed){
-                alert('소스코드가 복사 되었습니다\n본인의 블로그 또는 사이트에 붙여넣으세요.');
+                console.log(html);
+                alert('소스코드가 복사 되었습니다\n본인의 블로그 또는 사이트에 붙여넣기 하세요.');
             }
             return false;
 
@@ -567,6 +555,11 @@
         function count() {
             console.log(1);
         }
+        /*
+        function watchTv() {
+            $(".tvSection").css("display", "block");
+        }
+        */
         </script>
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
         <script type="text/javascript">
