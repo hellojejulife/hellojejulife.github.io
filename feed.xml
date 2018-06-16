@@ -1,0 +1,30 @@
+<rss version="2.0">
+<channel>
+    <title>2018 러시아 월드컵</title>
+    <link>https://hellojejulife.github.io/russia_worldcup.html</link>
+    <description>2018 러시아 월드컵 일정</description>
+    <pubDate>Sat, 16 Jun 2018 14:00:24 GMT+9</pubDate>
+    <lastBuildDate>Sat, 16 Jun 2018 14:00:24 GMT+9</lastBuildDate>
+    <ttl>1440</ttl>
+    <item>
+        <title>2018년 6월 15일 00:00 러시아 vs 사우디아라비아</title>
+        <description>경기종료 5:0 러시아 사우디아라비아 하이라이트</description>
+        <link>https://hellojejulife.github.io/russia_worldcup.html</link>
+    </item>
+    <item>
+        <title>2018년 6월 15일 21:00 이집트 vs 우루과이</title>
+        <description>경기종료 0:1 이집트 우루과이 하이라이트</description>
+        <link>https://hellojejulife.github.io/russia_worldcup.html</link>
+    </item>
+    <item>
+        <title>2018년 6월 16일 00:00 모로코 vs 이란</title>
+        <description>경기종료 0:1 모로코 이란 하이라이트</description>
+        <link>https://hellojejulife.github.io/russia_worldcup.html</link>
+    </item>
+    <item>
+        <title>2018년 6월 14일 03:00 포르투갈 vs 스페인</title>
+        <description>경기종료 3:3 포르투갈 스페인 하이라이트</description>
+        <link>https://hellojejulife.github.io/russia_worldcup.html</link>
+    </item>
+</channel>
+</rss>
