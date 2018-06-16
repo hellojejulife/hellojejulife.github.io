@@ -556,11 +556,16 @@
         function count() {
             console.log(1);
         }
-        /*
-        function watchTv() {
-            $(".tvSection").css("display", "block");
+        var filter = "win16|win32|win64|mac|macintel"; 
+        if ( navigator.platform ) { 
+            if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
+                $(".url-share").css("display", "none");
+            } else { 
+                $(".url-share").css("display", "block");
+            } 
         }
-        */
+
+
         </script>
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
         <script type="text/javascript">
@@ -602,5 +607,6 @@
             });
         //]]>
         </script>
+
 </body>
 </html>
