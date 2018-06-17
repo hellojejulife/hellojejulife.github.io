@@ -573,14 +573,16 @@
 
         var today = mm + "월 " + dd + "일";
         var round_td = $("tr.round th").text();
+
+        var search_today = round_td.indexOf(today);
         console.log(round_td);
 
         console.log(today);
 
         function todayRound() {
             $(".btn_today").click(function() {
-                if (today == round_td) {
-                    $(".round").addClass("today").css("display","block");   
+                if (search_today != -1) {
+                    $(".round").addClass("today");   
                 }
             });
         }
