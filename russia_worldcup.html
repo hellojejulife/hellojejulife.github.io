@@ -124,6 +124,9 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
+        <div class="day_control">
+            <button type="button" class="btn btn-success btn_today" onclick="todayRound();" style="width:100%; height:60px; margin-bottom: 10px;"><i class="fas fa-share"></i> 오늘 경기</button>
+        </div>
         <div class="table_3">
             <blockquote class="blockquote">
                 <p class="mb-0 mt-10">조별 리그 - A조</p>
@@ -131,32 +134,32 @@
             
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 15일(금)<br />00:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ru.png" /><span class="score_1 badge badge-pill badge-danger">5</span><br />러시아<br />vs<br /><img src="flags.32/sa.png" /><span class="score_2 badge badge-pill badge-danger">0</span><br />사우디아라비아</td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/sGcGnZlEsus?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 15일(금)<br />21:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/et.png" /><span class="score_1 badge badge-pill badge-danger">0</span><br />이집트<br />vs<br /><img src="flags.32/uy.png" /><span class="score_2 badge badge-pill badge-danger">1</span><br />우루과이</td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/PCJ9Oppu61k?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 20일(수)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ru.png" /><br />러시아<br />vs<br /><img src="flags.32/et.png" /><br />이집트</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 21일(목)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/uy.png" /><br />우루과이<br />vs<br /><img src="flags.32/sa.png" /><br />사우디아라비아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 25일(월)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/uy.png" /><br />우루과이<br />vs<br /><img src="flags.32/ru.png" /><br />러시아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 25일(월)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/sa.png" /><br />사우디아라비아<br />vs<br /><img src="flags.32/et.png" /><br />이집트</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="https://www.foxsports.com/soccer/fifa-world-cup/match-stream-108544?widget=schedule">FOX TV</a></td>
@@ -182,32 +185,32 @@
             </blockquote>
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 16일(토)<br />00:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/mc.png" /><span class="score_1 badge badge-pill badge-danger">0</span><br />모로코<br />vs<br /><img src="flags.32/ir.png" /><span class="score_2 badge badge-pill badge-danger">1</span><br />이란</td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/eQ3rN4zyNxM?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 16일(토)<br />03:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/pt.png" /><span class="score_1 badge badge-pill badge-danger">3</span><br />포르투갈<br />vs<br /><img src="flags.32/es.png" /><span class="score_2 badge badge-pill badge-danger">3</span><br />스페인</td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/2Mh-lkt20us?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 20일(수)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/pt.png" /><br />포르투칼<br />vs<br /><img src="flags.32/mc.png" /><br />모르코</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 21일(목)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ir.png" /><br />이란<br />vs<br /><img src="flags.32/es.png" /><br />스페인</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 26일(화)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ir.png" /><br />이란<br />vs<br /><img src="flags.32/pt.png" /><br />포르투칼</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 26일(화)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/es.png" /><br />스페인<br />vs<br /><img src="flags.32/mc.png" /><br />모르코</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
@@ -233,32 +236,32 @@
             </blockquote>
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 16일(토)<br />19:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/fr.png" /><span class="score_1 badge badge-pill badge-danger">2</span><br />프랑스<br />vs<br /><img src="flags.32/cc.png" /><span class="score_2 badge badge-pill badge-danger">1</span><br />호주</td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/HLRvQmBBVzY?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 17일(일)<br />01:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/pe.png" /><span class="score_1 badge badge-pill badge-danger">0</span><br />페루<br />vs<br /><img src="flags.32/dk.png" /><span class="score_2 badge badge-pill badge-danger">1</span><br />덴마크</td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/DKldX-M3gfA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 21일(목)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/dk.png" /><br />덴마크<br />vs<br /><img src="flags.32/cc.png" /><br />호주</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 22일(금)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/fr.png" /><br />프랑스<br />vs<br /><img src="flags.32/pe.png" /><br />페루</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 26일(화)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/dk.png" /><br />덴마크<br />vs<br /><img src="flags.32/fr.png" /><br />프랑스</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 26일(화)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/cc.png" /><br />호주<br />vs<br /><img src="flags.32/pe.png" /><br />페루</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
@@ -284,32 +287,32 @@
             </blockquote>
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 16일(토)<br />22:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ar.png" /><span class="score_1 badge badge-pill badge-danger">1</span><br />아르헨티나<br />vs<br /><img src="flags.32/is.png" /><span class="score_2 badge badge-pill badge-danger">1</span><br />아이슬란드</td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/YdM80l1rjxs?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 17일(일)<br />04:00<br /><span class="badge badge-dark">경기 종료</span></th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/hr.png" /><span class="score_1 badge badge-pill badge-danger">2</span><br />크로아티아<br />vs<br /><img src="flags.32/ng.png" /><span class="score_2 badge badge-pill badge-danger">0</span><br />나이지리아<br /></td>
                         <td style="width:100%; height:100%; display:inline-table;"><iframe width="100%" height="200vh" src="https://www.youtube.com/embed/1-HnJuIbx3o?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display:block;"></iframe></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 22일(금)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ar.png" /><br />아르헨티나<br />vs<br /><img src="flags.32/hr.png" /><br />크로아티아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 23일(토)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ng.png" /><br />나이지리아<br />vs<br /><img src="flags.32/is.png" /><br />아이슬란드</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 27일(수)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ng.png" /><br />나이지리아<br />vs<br /><img src="flags.32/ar.png" /><br />아르헨티나</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 27일(수)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/is.png" /><br />아이슬란드<br />vs<br /><img src="flags.32/hr.png" /><br />크로아티아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
@@ -335,32 +338,32 @@
             </blockquote>
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 17일(일)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/cr.png" /><br />코스타리카<br />vs<br /><img src="flags.32/rs.png" /><br />세르비아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 18일(월)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/br.png" /><br />브라질<br />vs<br /><img src="flags.32/ch.png" /><br />스위스</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 22일(금)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/br.png" /><br />브라질<br />vs<br /><img src="flags.32/cr.png" /><br />코스타리카</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 23일(토)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/rs.png" /><br />세르비아<br />vs<br /><img src="flags.32/ch.png" /><br />스위스</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 28일(목)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/rs.png" /><br />세르비아<br />vs<br /><img src="flags.32/br.png" /><br />브라질</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 28일(목)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/ch.png" /><br />스위스<br />vs<br /><img src="flags.32/cr.png" /><br />코스타리카</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
@@ -386,32 +389,32 @@
             </blockquote>
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 18일(월)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/de.png" /><br />독일<br />vs<br /><img src="flags.32/mx.png" /><br />멕시코</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/12#?chid=12" target="_blank">KBS 2TV</a><br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 18일(월)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/se.png" /><br />스웨덴<br />vs<br /><img src="flags.32/kr.png" /><br />대한민국</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/12#?chid=12" target="_blank">KBS 2TV</a><br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 24일(일)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/kr.png" /><br />대한민국<br />vs<br /><img src="flags.32/mx.png" /><br />멕시코</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/12#?chid=12" target="_blank">KBS 2TV</a><br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 24일(일)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/de.png" /><br />독일<br />vs<br /><img src="flags.32/se.png" /><br />스웨덴</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 27일(수)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/mx.png" /><br />멕시코<br />vs<br /><img src="flags.32/se.png" /><br />스웨덴</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/11#?chid=11" target="_blank">KBS 1TV</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 27일(수)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/kr.png" /><br />대한민국<br />vs<br /><img src="flags.32/de.png" /><br />독일</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/12#?chid=12" target="_blank">KBS 2TV</a><br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
@@ -437,32 +440,32 @@
             </blockquote>
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 19일(화)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/be.png" /><br />벨기에<br />vs<br /><img src="flags.32/pa.png" /><br />파나마</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 19일(화)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/tn.png" /><br />튀니지<br />vs<br /><img src="flags.32/en.png" /><br />잉글랜드</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 23일(토)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/be.png" /><br />벨기에<br />vs<br /><img src="flags.32/tn.png" /><br />튀니지</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 24일(일)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/en.png" /><br />잉글랜드<br />vs<br /><img src="flags.32/pa.png" /><br />파나마</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 29일(금)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/en.png" /><br />잉글랜드<br />vs<br /><img src="flags.32/be.png" /><br />벨기에</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 29일(금)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/pa.png" /><br />파나마<br />vs<br /><img src="flags.32/tn.png" /><br />튀니지</td>
                         <td style="vertical-align: middle;">중계 채널<br />없음</td>
@@ -488,32 +491,32 @@
             </blockquote>
             <table class="table table-bordered">  
                 <tbody>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 19일(화)<br />21:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/co.png" /><br />콜롬비아<br />vs<br /><img src="flags.32/jp.png" /><br />일본</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 20일(수)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/pl.png" /><br />폴란드<br />vs<br /><img src="flags.32/sn.png" /><br />세네갈</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 25일(월)<br />00:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/jp.png" /><br />일본<br />vs<br /><img src="flags.32/sn.png" /><br />세네갈</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 25일(월)<br />03:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/pl.png" /><br />폴란드<br />vs<br /><img src="flags.32/co.png" /><br />콜롬비아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 28일(목)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/jp.png" /><br />일본<br />vs<br /><img src="flags.32/pl.png" /><br />폴란드</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://vodmall.imbc.com/player/onair.aspx" target="_blank">MBC</a><br /><a href="http://play.sbs.co.kr/onair/pc/index.html?div=pc_onair" target="_blank">SBS</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
                     </tr>
-                    <tr>
+                    <tr class="round">
                         <th scope="row" style="background-color: #a6110c; color: #fff; text-align: center; vertical-align: middle;">6월 28일(목)<br />23:00</th>
                         <td style="text-align: center; vertical-align: middle;"><img src="flags.32/pa.png" /><br />세네갈<br />vs<br /><img src="flags.32/tn.png" /><br />콜롬비아</td>
                         <td style="vertical-align: middle;">중계 채널<br /><a href="http://myk.kbs.co.kr/live/tv/11#?chid=11" target="_blank">KBS 1TV</a><br /><a href="http://2018wc.sports.afreecatv.com/" target="_blank">아프리카TV</a></td>
@@ -523,7 +526,7 @@
         </div>
         <textarea id="clipBoard" style="width: 100%; height: 40px; display: none;" readonly>아래에 "복사하기" 버튼을 클릭하세요.</textarea>
         <div class="share">
-            <button type="button" class="btn btn-info url-share" data-toggle="modal" data-target="#myModal" onclick="count();" style="width:100%; height:60px; margin-bottom: 10px;"><i class="fas fa-share"></i> 2018 러시아 월드컵 일정 퍼가기</button>
+            <button type="button" class="btn btn-info url-share" onclick="count();" style="width:100%; height:60px; margin-bottom: 10px;"><i class="fas fa-share"></i> 2018 러시아 월드컵 일정 퍼가기</button>
             <button type="button" class="btn btn-warning" id="kakao-link-btn" href="javascript:;" style="width:100%; height:60px;"><i class="far fa-comment"></i> 2018 러시아 월드컵 일정 카카오톡 공유하기</button>
         </div>
       
@@ -568,9 +571,18 @@
         var mm = dt.getMonth()+1;
         var dd = dt.getDate();
 
-        var today = mm + "." + dd;
+        var today = mm + "월" + dd + "일";
+        var round_td = $(".round > th").text();
 
         console.log(today);
+
+        function todayRound() {
+            $(".btn_today").click(function() {
+                if (today == round_td) {
+                    $(".round").addClass("today").css("display","block");   
+                }
+            });
+        }
 
         </script>
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
