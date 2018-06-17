@@ -562,7 +562,15 @@
                 $(".url-share").css("display", "block");
             } 
         }
+        
+        var dt = new Date();
+        
+        var mm = dt.getMonth()+1;
+        var dd = dt.getDay();
 
+        var today = mm + "." + dd;
+
+        console.log(today);
 
         </script>
         <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
